@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isadora Martins • Doula e Enfermeira</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* Navbar fixa */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffc5e8;
+        color: #4b3b40;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: #4b3b40;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #9a5f66;
+      }
+
+      body {
+        padding-top: 60px;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        margin-bottom: 12px;
+        font-size: 1.05em;
+      }
+
+      ul li i {
+        margin-right: 8px;
+        color: #d179a0;
+      }
+
+      /* Botão WhatsApp */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      /* Responsivo */
+      @media (max-width: 600px) {
+        nav {
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 10px;
+          font-size: 0.9em;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#carrossel">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <header>
+      <h1>Isadora Martins</h1>
+      <p>Doula e Enfermeira Obstetra em São Luís 📍</p>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p>
+        Olá! Sou <strong>Isadora Martins</strong>, enfermeira formada com
+        pós-graduação em Obstetrícia e Neonatologia, além de doula certificada
+        por amor e vocação. Dedico minha vida ao acolhimento e cuidado de
+        mulheres nas fases mais transformadoras de suas vidas: gestação, parto e
+        pós-parto.
+      </p>
+
+      <p>
+        O trabalho da doula vai muito além do acompanhamento durante o parto.
+        Estou ao seu lado oferecendo suporte físico, emocional e informativo
+        desde o início da gestação até o puerpério.
+      </p>
+
+      <h3>✨ Apoio que ofereço:</h3>
+      <ul>
+        <li>
+          <i class="fas fa-baby"></i><strong>Gestação:</strong> orientações
+          sobre mudanças no corpo, preparação para o parto, plano de parto
+          humanizado.
+        </li>
+        <li>
+          <i class="fas fa-heartbeat"></i><strong>Parto:</strong> presença
+          contínua para alívio da dor, técnicas de respiração e conforto, apoio
+          emocional à mulher e à família.
+        </li>
+        <li>
+          <i class="fas fa-hands-holding-child"></i
+          ><strong>Pós-parto:</strong> cuidados com o bebê e o corpo materno,
+          acolhimento emocional, escuta ativa.
+        </li>
+        <li>
+          <i class="fas fa-breastfeeding"></i
+          ><strong>Amamentação:</strong> preparo antes do nascimento e suporte
+          após, ajudando na pega correta, manejo das dores e dúvidas frequentes.
+        </li>
+      </ul>
+
+      <p>
+        Minha missão é garantir que você se sinta segura, informada e respeitada
+        em cada etapa desse processo tão único. Você não está sozinha — estou
+        aqui para caminhar com você. 🌸
+      </p>
+    </section>
+
+    <!-- Botão de WhatsApp -->
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/5598988583345"
+      target="_blank"
+      aria-label="Fale comigo no WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
+
+  <section id="contato">
+    <h2>Agende seu atendimento</h2>
+    <p>Preencha o formulário e te envio uma resposta direto pelo WhatsApp 💬</p>
+
+    <form id="whatsapp-form" onsubmit="enviarParaWhatsApp(event)">
+      <label
+        >Nome:<br />
+        <input
+          type="text"
+          id="nome"
+          required
+          placeholder="Seu nome completo"
+        /> </label
+      ><br /><br />
+
+      <label
+        >Serviço desejado:<br />
+        <select id="servico" required>
+          <option value="">Selecione</option>
+          <option value="Consulta gestacional">Consulta gestacional</option>
+          <option value="Acompanhamento de parto">
+            Acompanhamento de parto
+          </option>
+          <option value="Apoio pós-parto">Apoio pós-parto</option>
+          <option value="Amamentação">Amamentação</option>
+        </select> </label
+      ><br /><br />
+
+      <label
+        >Mensagem adicional:<br />
+        <textarea
+          id="mensagem"
+          rows="4"
+          placeholder="Escreva algo (opcional)"
+        ></textarea></label
+      ><br /><br />
+
+      <button type="submit">Enviar via WhatsApp</button>
+    </form>
+  </section>
+
+  <section id="carrossel">
+    <h2>Galeria de Imagens</h2>
+    <div class="carousel-container">
+      <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+
+      <div class="carousel-slide" id="carousel-slide">
+        <!-- As imagens serão inseridas pelo JS -->
+      </div>
+
+      <button class="next" aria-label="Próxima imagem">&#10095;</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Isadora Martins • São Luís – MA</p>
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/enfisadoulaa/" target="_blank"
+        >@enfisadoulaa</a
+      >
+    </p>
+  </footer>
+
+  <script>
+    function enviarParaWhatsApp(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const servico = document.getElementById("servico").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const numero = "5598988583345"; // <- seu número com DDD e sem símbolos
+
+      const texto = `Olá! Me chamo ${nome}. Tenho interesse em: *${servico}*.
+
+${mensagem ? "Mensagem: " + mensagem : ""}
+
+Poderia me retornar, por favor?`;
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script>
+    let imagens = [
+      "assets/Isadora Serra (119).JPG",
+      "assets/Isadora Serra (123).JPG",
+      "assets/Isadora Serra (348).JPG",
+      "assets/Isadora Serra (367).JPG",
+      "assets/Isadora Serra (373).JPG",
+      "assets/Isadora Serra (455).JPG",
+      "assets/Isadora Serra (56).JPG",
+      "assets/Isadora Serra (6).JPG",
+      "assets/Isadora Serra (7) (1).JPG",
+      "assets/Isadora Serra (7).JPG",
+      "assets/Isadora Serra (85).JPG",
+      "assets/Isadora Serra (96).JPG",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (1).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (2).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (3).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.15.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (1).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (2).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (3).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.16.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (1).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (2).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (3).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.17.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.18.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.20 (1).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.20.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.21 (1).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.21 (2).jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.21.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.23.jpeg",
+      "assets/WhatsApp Image 2025-07-31 at 09.02.24.jpeg",
+    ];
+
+    // Embaralhar
+    for (let i = imagens.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [imagens[i], imagens[j]] = [imagens[j], imagens[i]];
+    }
+
+    const container = document.getElementById("carousel-slide");
+
+    imagens.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      container.appendChild(img);
+    });
+
+    const slides = container.querySelectorAll("img");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const width = slides[0].clientWidth;
+      container.style.transform = `translateX(${-width * currentIndex}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= slides.length) currentIndex = 0;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex--;
+      if (currentIndex < 0) currentIndex = slides.length - 1;
+      updateCarousel();
+    });
+
+    window.addEventListener("resize", updateCarousel);
+
+    updateCarousel();
+  </script>
+</html>

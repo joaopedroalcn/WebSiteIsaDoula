@@ -1,0 +1,246 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: white;
+  color: #4b3b40;
+  line-height: 1.7;
+  padding-top: 1rem;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ffc5e8;
+  color: #4b3b40;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #d179a0; /* tom intermediário entre rosa e vinho */
+  text-align: center;
+}
+
+/* Sobre */
+#sobre p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Galeria */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Seção do formulário */
+#contato {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 80vw;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+#contato h2 {
+  text-align: center;
+  color: #d179a0;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#contato p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+#whatsapp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#whatsapp-form label {
+  font-weight: 600;
+  color: #4b3b40;
+  font-size: 1em;
+}
+
+#whatsapp-form input,
+#whatsapp-form select,
+#whatsapp-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #fff9fb;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+#whatsapp-form input:focus,
+#whatsapp-form select:focus,
+#whatsapp-form textarea:focus {
+  outline: none;
+  border-color: #ffc5e8;
+  box-shadow: 0 0 0 2px #ffe0f1;
+}
+
+#whatsapp-form button {
+  background-color: #25d366;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#whatsapp-form button:hover {
+  background-color: #1ebd5a;
+}
+
+#whatsapp-form button i {
+  margin-right: 8px;
+}
+
+/* Contato */
+#contato p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+#contato iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+  background-color: #fce9f4; /* tom leve da cor principal */
+  color: #4b3b40;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #d179a0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#carrossel {
+  width: 80vw;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide img {
+  max-height: 400px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 12px;
+  user-select: none;
+  margin-right: 1rem;
+}
+
+/* Remove margem direita da última imagem para não criar espaço extra */
+.carousel-slide img:last-child {
+  margin-right: 0;
+}
+
+/* Botões */
+.carousel-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 197, 232, 0.8);
+  border: none;
+  font-size: 2.5rem;
+  color: #4b3b40;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-container button:hover {
+  background-color: #ffc5e8;
+}
+
+.carousel-container .prev {
+  left: 10px;
+}
+
+.carousel-container .next {
+  right: 10px;
+}
