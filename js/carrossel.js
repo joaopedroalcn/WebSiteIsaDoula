@@ -45,6 +45,7 @@ imagens.forEach((src) => {
   const img = document.createElement("img");
   img.src = src;
   img.alt = "";
+  img.loading = "lazy";
   container.appendChild(img);
 });
 
