@@ -12,145 +12,130 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       crossorigin="anonymous"
     />
-
-    <style>
-      /* Navbar fixa */
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #ffc5e8;
-        color: #4b3b40;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        z-index: 999;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      nav a {
-        color: #4b3b40;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: #9a5f66;
-      }
-
-      body {
-        padding-top: 60px;
-      }
-
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      ul li {
-        margin-bottom: 12px;
-        font-size: 1.05em;
-      }
-
-      ul li i {
-        margin-right: 8px;
-        color: #d179a0;
-      }
-
-      /* Botão WhatsApp */
-      .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-      }
-
-      /* Responsivo */
-      @media (max-width: 600px) {
-        nav {
-          flex-wrap: wrap;
-          gap: 10px;
-          padding: 10px;
-          font-size: 0.9em;
-        }
-
-        .gallery {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <!-- Google Fonts para logo manuscrita -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#carrossel">Galeria</a>
-      <a href="#contato">Contato</a>
-    </nav>
-
-    <header>
-      <h1>Isadora Martins</h1>
-      <p>Doula e Enfermeira Obstetra em São Luís 📍</p>
+    <header class="navbar">
+      <div class="logo">Isadora Serra Martins Macieira</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#carrossel">Momentos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
-    <section id="sobre">
-      <h2>Sobre</h2>
-      <p>
-        Olá! Sou <strong>Isadora Martins</strong>, enfermeira formada com
-        pós-graduação em Obstetrícia e Neonatologia, além de doula certificada
-        por amor e vocação. Dedico minha vida ao acolhimento e cuidado de
-        mulheres nas fases mais transformadoras de suas vidas: gestação, parto e
-        pós-parto.
-      </p>
+    <section id="sobre" class="sobre-container">
+      <div class="sobre-texto">
+        <h2>Sobre</h2>
+        <p>
+          Olá! Sou <strong>Isadora Martins</strong>, enfermeira formada com
+          pós-graduação em Obstetrícia e Neonatologia, além de doula certificada
+          por amor e vocação. Dedico minha vida ao acolhimento e cuidado de
+          mulheres nas fases mais transformadoras de suas vidas: gestação, parto
+          e pós-parto.
+        </p>
 
-      <p>
-        O trabalho da doula vai muito além do acompanhamento durante o parto.
-        Estou ao seu lado oferecendo suporte físico, emocional e informativo
-        desde o início da gestação até o puerpério.
-      </p>
+        <p>
+          O trabalho da doula vai muito além do acompanhamento durante o parto.
+          Estou ao seu lado oferecendo suporte físico, emocional e informativo
+          desde o início da gestação até o puerpério.
+        </p>
 
-      <h3>✨ Apoio que ofereço:</h3>
-      <ul>
-        <li>
-          <i class="fas fa-baby"></i><strong>Gestação:</strong> orientações
-          sobre mudanças no corpo, preparação para o parto, plano de parto
-          humanizado.
-        </li>
-        <li>
-          <i class="fas fa-heartbeat"></i><strong>Parto:</strong> presença
-          contínua para alívio da dor, técnicas de respiração e conforto, apoio
-          emocional à mulher e à família.
-        </li>
-        <li>
-          <i class="fas fa-hands-holding-child"></i
-          ><strong>Pós-parto:</strong> cuidados com o bebê e o corpo materno,
-          acolhimento emocional, escuta ativa.
-        </li>
-        <li>
-          <i class="fas fa-breastfeeding"></i
-          ><strong>Amamentação:</strong> preparo antes do nascimento e suporte
-          após, ajudando na pega correta, manejo das dores e dúvidas frequentes.
-        </li>
-      </ul>
+        <h3>✨ Apoio que ofereço:</h3>
+        <ul>
+          <li>
+            <i class="fas fa-baby"></i><strong>Gestação:</strong> orientações
+            sobre mudanças no corpo, preparação para o parto, plano de parto
+            humanizado.
+          </li>
+          <li>
+            <i class="fas fa-heartbeat"></i><strong>Parto:</strong> presença
+            contínua para alívio da dor, técnicas de respiração e conforto,
+            apoio emocional à mulher e à família.
+          </li>
+          <li>
+            <i class="fas fa-hands-holding-child"></i
+            ><strong>Pós-parto:</strong> cuidados com o bebê e o corpo materno,
+            acolhimento emocional, escuta ativa.
+          </li>
+          <li>
+            <i class="fas fa-breastfeeding"></i
+            ><strong>Amamentação:</strong> preparo antes do nascimento e suporte
+            após, ajudando na pega correta, manejo das dores e dúvidas
+            frequentes.
+          </li>
+        </ul>
 
-      <p>
-        Minha missão é garantir que você se sinta segura, informada e respeitada
-        em cada etapa desse processo tão único. Você não está sozinha — estou
-        aqui para caminhar com você. 🌸
-      </p>
+        <p>
+          Minha missão é garantir que você se sinta segura, informada e
+          respeitada em cada etapa desse processo tão único. Você não está
+          sozinha — estou aqui para caminhar com você. 🌸
+        </p>
+      </div>
+      <div class="sobre-imagem">
+        <img src="/assets/Home 2.jpeg" alt="Isadora Martins" />
+      </div>
+    </section>
+
+    <section id="servicos" class="servicos-container">
+      <h2>Serviços que Ofereço</h2>
+      <div class="servicos-lista">
+        <div class="servico-card">
+          <i class="fas fa-baby fa-2x"></i>
+          <h3>Doula</h3>
+          <ul>
+            <li>Acompanhamento durante toda a gestação</li>
+            <li>Preparação para o parto e plano de parto</li>
+            <li>Suporte físico e emocional no parto</li>
+            <li>Orientação e apoio no pós-parto</li>
+            <li>Auxílio na amamentação</li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-user-nurse fa-2x"></i>
+          <h3>Enfermagem Obstétrica</h3>
+          <ul>
+            <li>Consultas de pré-natal</li>
+            <li>Cuidados com a saúde da gestante e do bebê</li>
+            <li>Orientação sobre parto humanizado</li>
+            <li>Visitas domiciliares</li>
+            <li>Cuidados no puerpério</li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-brain fa-2x"></i>
+          <h3>Acompanhamento Psicológico</h3>
+          <ul>
+            <li>Escuta ativa e acolhimento emocional</li>
+            <li>Orientação para enfrentamento de medos e ansiedades</li>
+            <li>Promoção do bem-estar mental durante a gestação</li>
+            <li>Suporte psicológico no pós-parto</li>
+            <li>
+              Encaminhamento para profissionais especializados, se necessário
+            </li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <i class="fas fa-stethoscope fa-2x"></i>
+          <h3>Funções da Enfermeira Obstetra</h3>
+          <ul>
+            <li>Monitoramento de sinais vitais maternos e fetais</li>
+            <li>Realização de curativos e cuidados com feridas</li>
+            <li>Orientação sobre cuidados com o recém-nascido</li>
+            <li>Educação em saúde para gestantes e familiares</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Botão de WhatsApp -->
@@ -162,170 +147,156 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
-  </body>
 
-  <section id="contato">
-    <h2>Agende seu atendimento</h2>
-    <p>Preencha o formulário e te envio uma resposta direto pelo WhatsApp 💬</p>
+    <section id="contato">
+      <h2>Agende seu atendimento</h2>
+      <p>
+        Preencha o formulário e te envio uma resposta direto pelo WhatsApp 💬
+      </p>
 
-    <form id="whatsapp-form" onsubmit="enviarParaWhatsApp(event)">
-      <label
-        >Nome:<br />
-        <input
-          type="text"
-          id="nome"
-          required
-          placeholder="Seu nome completo"
-        /> </label
-      ><br /><br />
+      <form id="whatsapp-form" onsubmit="enviarParaWhatsApp(event)">
+        <label
+          >Nome:<br />
+          <input
+            type="text"
+            id="nome"
+            required
+            placeholder="Seu nome completo"
+          /> </label
+        ><br /><br />
 
-      <label
-        >Serviço desejado:<br />
-        <select id="servico" required>
-          <option value="">Selecione</option>
-          <option value="Consulta gestacional">Consulta gestacional</option>
-          <option value="Acompanhamento de parto">
-            Acompanhamento de parto
-          </option>
-          <option value="Apoio pós-parto">Apoio pós-parto</option>
-          <option value="Amamentação">Amamentação</option>
-        </select> </label
-      ><br /><br />
+        <label
+          >Serviço desejado:<br />
+          <select id="servico" required>
+            <option value="">Selecione</option>
+            <option value="Consulta gestacional">Consulta gestacional</option>
+            <option value="Acompanhamento de parto">
+              Acompanhamento de parto
+            </option>
+            <option value="Apoio pós-parto">Apoio pós-parto</option>
+            <option value="Amamentação">Amamentação</option>
+          </select> </label
+        ><br /><br />
 
-      <label
-        >Mensagem adicional:<br />
-        <textarea
-          id="mensagem"
-          rows="4"
-          placeholder="Escreva algo (opcional)"
-        ></textarea></label
-      ><br /><br />
+        <label
+          >Mensagem adicional:<br />
+          <textarea
+            id="mensagem"
+            rows="4"
+            placeholder="Escreva algo (opcional)"
+          ></textarea></label
+        ><br /><br />
 
-      <button type="submit">Enviar via WhatsApp</button>
-    </form>
-  </section>
+        <button type="submit">Enviar via WhatsApp</button>
+      </form>
+    </section>
 
-  <section id="carrossel">
-    <h2>Galeria de Imagens</h2>
-    <div class="carousel-container">
-      <button class="prev" aria-label="Imagem anterior">&#10094;</button>
-
-      <div class="carousel-slide" id="carousel-slide">
-        <!-- As imagens serão inseridas pelo JS -->
+    <section id="dicas" class="dicas-container">
+      <h2>Dicas para Gestantes</h2>
+      <div class="dicas-lista">
+        <div class="dica-card">
+          <i class="fas fa-seedling fa-lg"></i>
+          <h3>Alimente-se bem</h3>
+          <p>
+            Inclua frutas, verduras e alimentos naturais na sua rotina. Uma boa
+            nutrição faz diferença para você e seu bebê.
+          </p>
+        </div>
+        <div class="dica-card">
+          <i class="fas fa-walking fa-lg"></i>
+          <h3>Movimente-se</h3>
+          <p>
+            Atividades leves, como caminhadas e alongamentos, ajudam no
+            bem-estar físico e emocional durante a gestação.
+          </p>
+        </div>
+        <div class="dica-card">
+          <i class="fas fa-heart fa-lg"></i>
+          <h3>Cuide da mente</h3>
+          <p>
+            Reserve momentos para relaxar, meditar e conversar sobre
+            sentimentos. O equilíbrio emocional é fundamental.
+          </p>
+        </div>
+        <div class="dica-card">
+          <i class="fas fa-users fa-lg"></i>
+          <h3>Busque apoio</h3>
+          <p>
+            Conte com profissionais, familiares e grupos de gestantes para
+            trocar experiências e tirar dúvidas.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <button class="next" aria-label="Próxima imagem">&#10095;</button>
-    </div>
-  </section>
+    <section id="carrossel">
+      <h2>Momentos</h2>
+      <div class="carousel-container">
+        <button class="prev" aria-label="Imagem anterior">&#10094;</button>
 
-  <footer>
-    <p>© 2025 Isadora Martins • São Luís – MA</p>
-    <p>
-      Instagram:
-      <a href="https://www.instagram.com/enfisadoulaa/" target="_blank"
-        >@enfisadoulaa</a
-      >
-    </p>
-  </footer>
+        <div class="carousel-slide" id="carousel-slide">
+          <!-- As imagens serão inseridas pelo JS -->
+        </div>
 
-  <script>
-    function enviarParaWhatsApp(event) {
-      event.preventDefault();
+        <button class="next" aria-label="Próxima imagem">&#10095;</button>
+      </div>
+    </section>
 
-      const nome = document.getElementById("nome").value;
-      const servico = document.getElementById("servico").value;
-      const mensagem = document.getElementById("mensagem").value;
+    <section id="faq" class="faq-container">
+      <h2>Perguntas Frequentes (FAQ)</h2>
+      <div class="faq-lista">
+        <div class="faq-item">
+          <button class="faq-pergunta">O que faz uma doula?</button>
+          <div class="faq-resposta">
+            A doula oferece suporte físico, emocional e informativo à gestante
+            antes, durante e após o parto, sem realizar procedimentos médicos.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Qual a diferença entre doula e enfermeira obstetra?
+          </button>
+          <div class="faq-resposta">
+            A doula foca no apoio emocional e informativo, enquanto a enfermeira
+            obstetra realiza cuidados clínicos e procedimentos de saúde
+            materno-infantil.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            O acompanhamento da doula substitui o médico?
+          </button>
+          <div class="faq-resposta">
+            Não. A doula complementa o cuidado médico, mas não substitui o
+            acompanhamento do obstetra ou outros profissionais de saúde.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Posso ter doula em parto hospitalar?
+          </button>
+          <div class="faq-resposta">
+            Sim! A presença da doula é permitida em hospitais e pode tornar a
+            experiência mais acolhedora e segura.
+          </div>
+        </div>
+      </div>
+    </section>
 
-      const numero = "5598988583345"; // <- seu número com DDD e sem símbolos
+    <footer>
+      <p>© 2025 Isadora Martins • São Luís – MA</p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/enfisadoulaa/" target="_blank"
+          >@enfisadoulaa</a
+        >
+      </p>
+    </footer>
 
-      const texto = `Olá! Me chamo ${nome}. Tenho interesse em: *${servico}*.
-
-${mensagem ? "Mensagem: " + mensagem : ""}
-
-Poderia me retornar, por favor?`;
-
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-      window.open(url, "_blank");
-    }
-  </script>
-
-  <script>
-    let imagens = [
-      "assets/Isadora Serra (119).JPG",
-      "assets/Isadora Serra (123).JPG",
-      "assets/Isadora Serra (348).JPG",
-      "assets/Isadora Serra (367).JPG",
-      "assets/Isadora Serra (373).JPG",
-      "assets/Isadora Serra (455).JPG",
-      "assets/Isadora Serra (56).JPG",
-      "assets/Isadora Serra (6).JPG",
-      "assets/Isadora Serra (7) (1).JPG",
-      "assets/Isadora Serra (7).JPG",
-      "assets/Isadora Serra (85).JPG",
-      "assets/Isadora Serra (96).JPG",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (1).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (2).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.15 (3).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.15.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (1).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (2).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.16 (3).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.16.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (1).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (2).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.17 (3).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.17.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.18.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.20 (1).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.20.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.21 (1).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.21 (2).jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.21.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.23.jpeg",
-      "assets/WhatsApp Image 2025-07-31 at 09.02.24.jpeg",
-    ];
-
-    // Embaralhar
-    for (let i = imagens.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [imagens[i], imagens[j]] = [imagens[j], imagens[i]];
-    }
-
-    const container = document.getElementById("carousel-slide");
-
-    imagens.forEach((src) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "";
-      container.appendChild(img);
-    });
-
-    const slides = container.querySelectorAll("img");
-    const prevBtn = document.querySelector(".prev");
-    const nextBtn = document.querySelector(".next");
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      const width = slides[0].clientWidth;
-      container.style.transform = `translateX(${-width * currentIndex}px)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex++;
-      if (currentIndex >= slides.length) currentIndex = 0;
-      updateCarousel();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex--;
-      if (currentIndex < 0) currentIndex = slides.length - 1;
-      updateCarousel();
-    });
-
-    window.addEventListener("resize", updateCarousel);
-
-    updateCarousel();
-  </script>
+    <!-- Scripts devem ser carregados antes do fechamento do body -->
+    <script src="js/carrossel.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/faq.js"></script>
+  </body>
 </html>

@@ -1,3 +1,293 @@
+/* Dicas */
+.dicas-container {
+  background: #fff9fb;
+  padding: 60px 20px;
+  max-width: 90vw;
+  margin: 2rem auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(209, 121, 160, 0.07);
+}
+.dicas-container h2 {
+  color: #d179a0;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2.5rem;
+}
+.dicas-lista {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dica-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(209, 121, 160, 0.08);
+  padding: 1.5rem 1.2rem;
+  max-width: 260px;
+  min-width: 200px;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.dica-card i {
+  color: #d179a0;
+  margin-bottom: 0.7rem;
+}
+.dica-card h3 {
+  color: #9a5f66;
+  font-size: 1.1em;
+  margin-bottom: 0.7rem;
+}
+.dica-card p {
+  color: #4b3b40;
+  font-size: 1em;
+}
+
+@media (max-width: 900px) {
+  .dicas-lista {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .dica-card {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicos-container,
+  .dicas-container,
+  .faq-container,
+  #contato,
+  section {
+    padding: 32px 6vw;
+    max-width: 100vw;
+    border-radius: 10px;
+  }
+  .servicos-lista {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .servico-card {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .dicas-lista {
+    gap: 1rem;
+  }
+  .dica-card {
+    padding: 1rem 0.7rem;
+  }
+  .faq-lista {
+    padding: 0 0.5rem;
+  }
+  header {
+    padding: 32px 6vw;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  .logo {
+    font-size: 1.1em;
+  }
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .sobre-imagem {
+    justify-content: center;
+    margin-top: 1rem;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .sobre-imagem img {
+    max-width: 98vw;
+  }
+  #carrossel {
+    width: 98vw;
+    padding: 0;
+  }
+  .carousel-container {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 1em;
+  }
+  header h1 {
+    font-size: 1.3em;
+  }
+  .servico-card h3,
+  .dica-card h3 {
+    font-size: 1em;
+  }
+  .faq-pergunta {
+    font-size: 1em;
+    padding: 0.7rem;
+  }
+  .faq-resposta {
+    padding: 0.7rem;
+  }
+}
+
+/* FAQ */
+.faq-container {
+  background: #fff;
+  padding: 60px 20px;
+  max-width: 90vw;
+  margin: 2rem auto 2rem auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(209, 121, 160, 0.07);
+}
+.faq-container h2 {
+  color: #d179a0;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2.5rem;
+}
+.faq-lista {
+  margin: 0 auto;
+}
+.faq-item {
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  background: #fff9fb;
+  box-shadow: 0 2px 8px rgba(209, 121, 160, 0.06);
+  overflow: hidden;
+}
+.faq-pergunta {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #9a5f66;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: left;
+  padding: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+.faq-pergunta:hover {
+  background: #ffe0f1;
+}
+.faq-resposta {
+  display: none;
+  padding: 1rem;
+  color: #4b3b40;
+  font-size: 1em;
+}
+.faq-item.open .faq-resposta {
+  display: block;
+}
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #fff9fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffc5e8;
+  border-radius: 8px;
+  border: 2px solid #fff9fb;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d179a0;
+}
+html {
+  scrollbar-color: #ffc5e8 #fff9fb;
+  scrollbar-width: thin;
+}
+/* Serviços */
+.servicos-container {
+  background: #fff9fb;
+  padding: 60px 20px;
+  max-width: 90vw;
+  margin: 2rem auto 2rem auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(209, 121, 160, 0.07);
+}
+
+.servicos-container h2 {
+  color: #d179a0;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2.5rem;
+}
+
+.servicos-lista {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(209, 121, 160, 0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 400px;
+  min-width: 260px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.servico-card:hover {
+  box-shadow: 0 6px 24px rgba(209, 121, 160, 0.16);
+}
+
+.servico-card i {
+  color: #d179a0;
+  margin-bottom: 1rem;
+}
+
+.servico-card h3 {
+  color: #9a5f66;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.servico-card ul {
+  list-style: disc inside;
+  color: #4b3b40;
+  font-size: 1em;
+  padding-left: 0;
+  margin: 0;
+}
+
+.servico-card ul li {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .servicos-lista {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .servico-card {
+    max-width: 95vw;
+    min-width: 0;
+  }
+}
 /* Reset básico */
 * {
   margin: 0;
@@ -11,6 +301,66 @@ body {
   color: #4b3b40;
   line-height: 1.7;
   padding-top: 1rem;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.3em;
+  color: #d179a0; /* tom intermediário entre rosa e vinho */
+}
+
+/* Navbar fixa */
+
+body {
+  padding-top: 60px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+ul li i {
+  margin-right: 8px;
+  color: #d179a0;
+}
+
+/* Botão WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Cabeçalho */
@@ -34,7 +384,7 @@ header p {
 /* Seções */
 section {
   padding: 60px 20px;
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -42,7 +392,6 @@ section h2 {
   font-size: 2em;
   margin-bottom: 20px;
   color: #d179a0; /* tom intermediário entre rosa e vinho */
-  text-align: center;
 }
 
 /* Sobre */
@@ -71,7 +420,7 @@ section h2 {
 #contato {
   background-color: #fff;
   padding: 60px 20px;
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -93,7 +442,6 @@ section h2 {
 #whatsapp-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 #whatsapp-form label {
@@ -181,7 +529,7 @@ footer a:hover {
 }
 
 #carrossel {
-  width: 80vw;
+  width: 90vw;
   margin: 2rem auto;
   text-align: center;
 }
@@ -190,7 +538,7 @@ footer a:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -243,4 +591,116 @@ footer a:hover {
 
 .carousel-container .next {
   right: 10px;
+}
+
+/* Navbar fixa */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links da navbar */
+
+/* Sempre esconda os nav-links por padrão, mostre só quando .active */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1001;
+  gap: 1.5rem;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Hamburger sempre visível */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Responsivo */
+
+/* Remove restrição de media query para o menu hamburguer/nav-links */
+
+/* ...código existente acima... */
+
+.sobre-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+
+.sobre-texto {
+  flex: 1 1 0;
+  min-width: 280px;
+}
+
+.sobre-imagem {
+  flex: 0 0 560px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.sobre-imagem img {
+  max-width: 560px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* Responsivo apenas para telas menores */
+@media (max-width: 900px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .sobre-imagem {
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .sobre-imagem img {
+    max-width: 90vw;
+  }
 }
