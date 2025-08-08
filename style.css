@@ -1,3 +1,138 @@
+/* ====== CHAMADA ANAMNESE ====== */
+.anamnese-chamada-container {
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0001;
+  max-width: 90vw;
+  margin: 40px auto 32px auto;
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+}
+.anamnese-chamada-container h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.anamnese-chamada-container p {
+  color: #444;
+  margin-bottom: 18px;
+}
+.anamnese-chamada-btn {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 1px 4px #0001;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.anamnese-chamada-btn:hover {
+  background: #1ebe57;
+}
+.anamnese-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin: 8px 0 0 0;
+}
+.anamnese-checkbox-group label {
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1rem;
+}
+.anamnese-radio-group {
+  display: flex;
+  gap: 18px;
+  margin: 6px 0 12px 0;
+}
+.anamnese-radio-group label {
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1rem;
+}
+/* ====== ANAMNESE FORMULÁRIO (PÁGINA DEDICADA) ====== */
+.anamnese-container {
+  background: #f8f8fc;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0001;
+  max-width: 90vw;
+  margin: 40px auto 32px auto;
+  padding: 32px 24px 24px 24px;
+}
+.anamnese-container h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+.anamnese-container p {
+  color: #444;
+  margin-bottom: 18px;
+}
+.anamnese-container label {
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+.anamnese-container input,
+.anamnese-container select,
+.anamnese-container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1cfcf;
+  border-radius: 6px;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+.anamnese-container input:focus,
+.anamnese-container select:focus,
+.anamnese-container textarea:focus {
+  border: 1.5px solid #b97a57;
+  outline: none;
+}
+.anamnese-container textarea {
+  resize: vertical;
+}
+.anamnese-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 1px 4px #0001;
+  letter-spacing: 0.5px;
+}
+.anamnese-whatsapp:hover {
+  background: #1ebe57;
+}
+@media (max-width: 600px) {
+  .anamnese-container {
+    padding: 18px 6vw 18px 6vw;
+  }
+}
 /* Dicas */
 .dicas-container {
   background: #fff9fb;
@@ -305,7 +440,7 @@ body {
 
 .logo {
   font-family: "Pacifico", cursive;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #d179a0; /* tom intermediário entre rosa e vinho */
 }
 

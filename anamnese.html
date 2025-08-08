@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anamnese • Isadora Martins</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts para logo manuscrita -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Isadora Serra Martins Macieira</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#carrossel">Momentos</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section id="anamnese" class="anamnese-container">
+        <h2>Anamnese</h2>
+        <p>
+          Preencha o formulário abaixo para um atendimento personalizado. Suas
+          informações serão enviadas diretamente para o WhatsApp.
+        </p>
+        <form id="anamnese-form">
+          <label
+            >Nome completo:<br />
+            <input
+              type="text"
+              name="nome_completo"
+              required
+              placeholder="Nome completo"
+            />
+          </label>
+          <label
+            >Nome do papai:<br />
+            <input type="text" name="nome_pai" placeholder="Nome do papai" />
+          </label>
+          <label
+            >Nome do baby:<br />
+            <input type="text" name="nome_baby" placeholder="Nome do bebê" />
+          </label>
+          <label
+            >Endereço:<br />
+            <input
+              type="text"
+              name="endereco"
+              placeholder="Endereço completo"
+            />
+          </label>
+          <label
+            >Cidade:<br />
+            <input type="text" name="cidade" placeholder="Cidade" />
+          </label>
+          <label
+            >Estado:<br />
+            <input type="text" name="estado" placeholder="Estado" />
+          </label>
+          <label
+            >CEP:<br />
+            <input type="text" name="cep" placeholder="CEP" />
+          </label>
+          <label
+            >Fone:<br />
+            <input type="text" name="fone" placeholder="Telefone(s)" />
+          </label>
+          <label
+            >CPF:<br />
+            <input type="text" name="cpf" placeholder="CPF" />
+          </label>
+          <label
+            >Data provável do parto:<br />
+            <input type="text" name="data_parto" placeholder="Data" />
+          </label>
+          <label
+            >Maternidade:<br />
+            <input
+              type="text"
+              name="maternidade"
+              placeholder="Nome da maternidade"
+            />
+          </label>
+          <label
+            >Forma de pagamento:<br />
+            <div class="anamnese-radio-group">
+              <label
+                ><input type="radio" name="pagamento" value="Transferência" />
+                Transferência</label
+              >
+              <label
+                ><input type="radio" name="pagamento" value="Pix" /> Pix</label
+              >
+              <label
+                ><input type="radio" name="pagamento" value="Cartão" />
+                Cartão</label
+              >
+            </div>
+          </label>
+          <label
+            >Autorização de imagem:<br />
+            <div class="anamnese-radio-group">
+              <label
+                ><input type="radio" name="imagem" value="Sim" required />
+                Sim</label
+              >
+              <label
+                ><input type="radio" name="imagem" value="Não" /> Não</label
+              >
+            </div>
+          </label>
+          <label>
+            Disponibilidade médica:<br />
+            <div class="anamnese-radio-group">
+              <label>
+                <input
+                  type="radio"
+                  name="disponibilidade"
+                  value="Sim, nome do obstetra"
+                  id="disponibilidade-obstetra"
+                />
+                Sim, nome do obstetra
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="disponibilidade"
+                  value="Plantonista"
+                  id="disponibilidade-plantonista"
+                />
+                Plantonista
+              </label>
+            </div>
+            <input
+              type="text"
+              name="nome_obstetra"
+              id="input-nome-obstetra"
+              placeholder="Nome do obstetra"
+              style="display: none; margin-top: 8px"
+            />
+          </label>
+          <label>
+            Gestação de risco:<br />
+            <div class="anamnese-radio-group">
+              <label
+                ><input type="radio" name="risco" value="Sim" id="risco-sim" />
+                Sim</label
+              >
+              <label
+                ><input type="radio" name="risco" value="Não" id="risco-nao" />
+                Não</label
+              >
+            </div>
+            <div
+              id="riscos-comuns-container"
+              style="display: none; margin-top: 8px"
+            >
+              <span style="font-size: 0.98em; color: #555"
+                >Selecione os riscos:</span
+              ><br />
+              <div class="anamnese-checkbox-group">
+                <label
+                  ><input type="checkbox" name="riscos[]" value="Hipertensão" />
+                  Hipertensão</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Diabetes gestacional"
+                  />
+                  Diabetes gestacional</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Pré-eclâmpsia"
+                  />
+                  Pré-eclâmpsia</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Infecção urinária"
+                  />
+                  Infecção urinária</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Descolamento de placenta"
+                  />
+                  Descolamento de placenta</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Parto prematuro"
+                  />
+                  Parto prematuro</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="riscos[]"
+                    value="Outros"
+                    id="riscos-outros"
+                  />
+                  Outros</label
+                >
+                <input
+                  type="text"
+                  name="riscos_outros"
+                  id="input-riscos-outros"
+                  placeholder="Descreva outros riscos"
+                  style="display: none; margin-top: 8px"
+                />
+              </div>
+            </div>
+          </label>
+          <button type="submit" class="anamnese-whatsapp">
+            Enviar via WhatsApp
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Isadora Martins • São Luís – MA</p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/enfisadoulaa/" target="_blank"
+          >@enfisadoulaa</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Envio do formulário de anamnese para o WhatsApp
+      document.addEventListener("DOMContentLoaded", function () {
+        // Lógica para mostrar/esconder campos extras
+        const inputNomeObstetra = document.getElementById(
+          "input-nome-obstetra"
+        );
+        const radioObstetra = document.getElementById(
+          "disponibilidade-obstetra"
+        );
+        const radioPlantonista = document.getElementById(
+          "disponibilidade-plantonista"
+        );
+        if (radioObstetra && inputNomeObstetra && radioPlantonista) {
+          radioObstetra.addEventListener("change", function () {
+            if (this.checked) inputNomeObstetra.style.display = "block";
+          });
+          radioPlantonista.addEventListener("change", function () {
+            if (this.checked) inputNomeObstetra.style.display = "none";
+          });
+        }
+
+        // Lógica para mostrar/esconder riscos comuns
+        const riscoSim = document.getElementById("risco-sim");
+        const riscoNao = document.getElementById("risco-nao");
+        const riscosContainer = document.getElementById(
+          "riscos-comuns-container"
+        );
+        if (riscoSim && riscoNao && riscosContainer) {
+          riscoSim.addEventListener("change", function () {
+            if (this.checked) riscosContainer.style.display = "block";
+          });
+          riscoNao.addEventListener("change", function () {
+            if (this.checked) riscosContainer.style.display = "none";
+          });
+        }
+
+        // Lógica para mostrar input Outros
+        const riscosOutros = document.getElementById("riscos-outros");
+        const inputRiscosOutros = document.getElementById(
+          "input-riscos-outros"
+        );
+        if (riscosOutros && inputRiscosOutros) {
+          riscosOutros.addEventListener("change", function () {
+            inputRiscosOutros.style.display = this.checked ? "block" : "none";
+          });
+        }
+
+        // Envio do formulário para o WhatsApp
+        const anamneseForm = document.getElementById("anamnese-form");
+        if (anamneseForm) {
+          anamneseForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(anamneseForm);
+            let msg = "*Anamnese preenchida pelo site*%0A";
+            msg += `Nome completo: ${data.get("nome_completo") || "-"}%0A`;
+            msg += `Nome do papai: ${data.get("nome_pai") || "-"}%0A`;
+            msg += `Nome do baby: ${data.get("nome_baby") || "-"}%0A`;
+            msg += `Endereço: ${data.get("endereco") || "-"}%0A`;
+            msg += `Cidade: ${data.get("cidade") || "-"}%0A`;
+            msg += `Estado: ${data.get("estado") || "-"}%0A`;
+            msg += `CEP: ${data.get("cep") || "-"}%0A`;
+            msg += `Fone: ${data.get("fone") || "-"}%0A`;
+            msg += `CPF: ${data.get("cpf") || "-"}%0A`;
+            msg += `Data provável do parto: ${
+              data.get("data_parto") || "-"
+            }%0A`;
+            msg += `Maternidade: ${data.get("maternidade") || "-"}%0A`;
+            msg += `Forma de pagamento: ${data.get("pagamento") || "-"}%0A`;
+            msg += `Autorização de imagem: ${data.get("imagem") || "-"}%0A`;
+            msg += `Disponibilidade médica: ${
+              data.get("disponibilidade") || "-"
+            }%0A`;
+            if (data.get("disponibilidade") === "Sim, nome do obstetra") {
+              msg += `Nome do obstetra: ${data.get("nome_obstetra") || "-"}%0A`;
+            }
+            msg += `Gestação de risco: ${data.get("risco") || "-"}%0A`;
+            if (data.get("risco") === "Sim") {
+              const riscosMarcados = data.getAll("riscos[]");
+              msg += `Riscos: ${
+                riscosMarcados.length ? riscosMarcados.join(", ") : "-"
+              }%0A`;
+              if (riscosMarcados.includes("Outros")) {
+                msg += `Outros riscos: ${data.get("riscos_outros") || "-"}%0A`;
+              }
+            }
+            const url = `https://wa.me/5598988583345?text=${msg}`;
+            window.open(url, "_blank");
+          });
+        }
+      });
+    </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
